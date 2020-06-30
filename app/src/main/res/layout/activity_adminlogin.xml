@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AdminloginActivity"
+    android:background="@drawable/activitybg"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:id="@+id/topadmin">
+    <Spinner
+        android:id="@+id/admintype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:backgroundTint="@color/white"
+        />
+    <EditText
+        android:id="@+id/adminname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:hint="@string/admin_name"
+        android:layout_margin="12dp"/>
+    <EditText
+        android:id="@+id/adminpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/admin_password"
+        android:backgroundTint="@color/white"
+        android:layout_margin="12dp"/>
+    <Button
+        android:id="@+id/loginadmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/borderedbutton"
+        android:layout_margin="12dp"
+        android:text="@string/login"/>
+
+</LinearLayout>

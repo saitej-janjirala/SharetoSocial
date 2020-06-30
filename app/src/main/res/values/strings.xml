@@ -1,0 +1,226 @@
+<resources>
+    <string name="app_name">SharetoSocial</string>
+    <string name="login">Login</string>
+    <string name="enter_phone_number">Enter phone number</string>
+    <string name="don_t_have_an_account_signup">Don\'t have an account?Signup</string>
+    <string name="or">OR</string>
+    <string name="signup">New User Signup</string>
+    <string name="forgotpassword">Forgot password?</string>
+    <string name="create_account">Create Account</string>
+    <string name="name">Name</string>
+    <string name="mobile_no">Mobile No</string>
+    <string name="loksabha_constituency">Loksabha Constituency</string>
+    <string name="assembly_constituency">Assembly Constituency</string>
+    <string name="connect_your_social_media_accounts">Connect your Social Media Accounts</string>
+    <string name="next">Next</string>
+    <string name="enter_whatsapp_number">Enter Whatsapp Number</string>
+    <string name="enter_twitter_id">Enter Twitter id</string>
+    <string name="enter_facebook_id">Enter facebook id</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_e_mail">Enter E-mail</string>
+    <string name="enter_otp">Enter Otp</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="enter_the_otp_sent_on_your_registered_phone_number">Enter the OTP sent on your registered \n phone number</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="enter_referal_code">Enter Referal Code</string>
+    <string name="submit">Submit</string>
+    <string name="open_drawer">opendrawer</string>
+    <string name="close_drawer">closedrawer</string>
+    <string-array name="LCS">
+        <item>LOKSABHA CONSTITUTENCY</item>
+        <item>ADILABAD</item>
+        <item>BHONGIR</item>
+        <item>CHEVELLA</item>
+        <item>HYDERABAD</item>
+        <item>KARIMNAGAR</item>
+        <item>KHAMMAM</item>
+        <item>MAHABUBABAD</item>
+        <item>MAHABUBANAGAR</item>
+        <item>MALKAJGIRI</item>
+        <item>NAGARKURNOOL</item>
+        <item>NALGONDA</item>
+        <item>NIZAMABAD</item>
+        <item>PEDDAPALLI</item>
+        <item>SECUNDERABAD</item>
+        <item>WARANGAL</item>
+        <item>ZAHEERABAD</item>
+    </string-array>
+    <string-array name="ADILABAD">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>ADILABAD</item>
+        <item>ASIFABAD</item>
+        <item>BOATH</item>
+        <item>KHANAPUR</item>
+        <item>MUDHOLE</item>
+        <item>NIRMAL</item>
+        <item>SIRPUR</item>
+    </string-array>
+    <string-array name="BHONGIR">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>ALER</item>
+        <item>BHONGIR</item>
+        <item>IBRAHIMPATNAM</item>
+        <item>JANAGAM</item>
+        <item>MUNUGODU</item>
+        <item>NAKIREKAL</item>
+        <item>THUNGATHURTHY</item>
+    </string-array>
+    <string-array name="CHEVELLA">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>CHEVELLA</item>
+        <item>MAHESHWARI</item>
+        <item>PARIGI</item>
+        <item>RAJENDRANAGAR</item>
+        <item>SHERLINGAMPALLY</item>
+        <item>THANDUR</item>
+        <item>VIKARABAD</item>
+    </string-array>
+    <string-array name="HYDERABAD">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>BAHADURPURA</item>
+        <item>CHANDRAYAN GUTTA</item>
+        <item>CHARMINAR</item>
+        <item>GHOSHAMAHAL</item>
+        <item>KHARVAN</item>
+        <item>MALAKPET</item>
+        <item>YAKATHPURA</item>
+    </string-array>
+    <string-array name="KARIMNAGAR">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>CHOPPADANDI</item>
+        <item>HUSNABAD</item>
+        <item>HUZURABAD</item>
+        <item>KARIMNAGAR</item>
+        <item>MANAKONDURU</item>
+        <item>SIRCILLA</item>
+        <item>VEMULAWADA</item>
+    </string-array>
+    <string-array name="KHAMMAM">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>ASHWARAOPETA</item>
+        <item>KHAMMAM</item>
+        <item>KOTHAGUDEM</item>
+        <item>MADHIRA</item>
+        <item>PALAIR</item>
+        <item>SATTUPALLI</item>
+        <item>WYRA</item>
+    </string-array>
+    <string-array name="MAHABUBABAD">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>BADRACHALAM</item>
+        <item>DORNAKAL</item>
+        <item>MAHABUBABAD</item>
+        <item>MULUGU</item>
+        <item>NARSAMPET</item>
+        <item>PINAPAKA</item>
+        <item>ILLANDHU</item>
+    </string-array>
+    <string-array name="MAHABUBANAGAR">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>DEVARAKADRA</item>
+        <item>JADCHARLA</item>
+        <item>KODANGAL</item>
+        <item>MAHABUBANAGAR</item>
+        <item>MAKTHAL</item>
+        <item>NARAYANPET</item>
+        <item>SHADNAGAR</item>
+    </string-array>
+    <string-array name="MALKAJGIRI">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>KUKATPALLY</item>
+        <item>LB NAGAR</item>
+        <item>MALKAJGIRI</item>
+        <item>MEDCHAL</item>
+        <item>QUTHUBULLAPUR</item>
+        <item>SECUNDERABAD CONTONMENT</item>
+        <item>UPPAL</item>
+    </string-array>
+    <string-array name="NAGARKURNOOL">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>ACHHAMPET</item>
+        <item>ALAMPUR</item>
+        <item>GADWAL</item>
+        <item>KALWAKURTHY</item>
+        <item>KOLLAPUR</item>
+        <item>NAGARKURNOOL</item>
+        <item>VANAPARTHY</item>
+    </string-array>
+    <string-array name="NALGONDA">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>DEVARAKONDA</item>
+        <item>HUZURNAGAR</item>
+        <item>KODADA</item>
+        <item>MIRYLAGUDA</item>
+        <item>NAGARJUNSAGAR</item>
+        <item>NALGONDA</item>
+        <item>SURYAPETA</item>
+    </string-array>
+    <string-array name="NIZAMABAD">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>ARMUR</item>
+        <item>BALKONDA</item>
+        <item>BODHAN</item>
+        <item>JAGITYAL</item>
+        <item>KORUTLA</item>
+        <item>NIZAMABAD URBAN</item>
+        <item>NIZAMABAD RURAL</item>
+    </string-array>
+    <string-array name="PEDDAPALLI">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>BELLAMPALLI</item>
+        <item>CHENNUR</item>
+        <item>DHARMAPURI</item>
+        <item>MANCHIRYAL</item>
+        <item>MANTHANI</item>
+        <item>PEDDAPALLI</item>
+        <item>RAMAGUNDAM</item>
+    </string-array>
+    <string-array name="SECUNDERABAD">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>AMBERPPET</item>
+        <item>JUBLIHILLS</item>
+        <item>KHAIRATHABAD</item>
+        <item>MUSHEERABAD</item>
+        <item>NAMPALLY</item>
+        <item>SANATHNAGAR</item>
+        <item>SECUNDERABAD</item>
+    </string-array>
+    <string-array name="WARANGAL">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>BHUPALPALLY</item>
+        <item>STATION GHANPUR</item>
+        <item>PALAKURTHI</item>
+        <item>PARAKALA</item>
+        <item>WARANGAL EAST</item>
+        <item>WARANGAL WEST</item>
+        <item>VARDHANNAPETA</item>
+    </string-array>
+    <string-array name="ZAHEERABAD">
+        <item>ASSEMBLY CONSTITUTION</item>
+        <item>ANDHOLE</item>
+        <item>BHANSUWADA</item>
+        <item>JUKKAL</item>
+        <item>KAMAREDDY</item>
+        <item>NARAYANKHED</item>
+        <item>ELLAREDDY</item>
+        <item>ZAHEERABAD</item>
+    </string-array>
+    <string-array name="admins">
+        <item>selectadmin</item>
+        <item>admin1</item>
+        <item>admin2</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_as_admin">Login as Admin</string>
+    <string name="daily_performance">Daily Performance</string>
+    <string name="state_rank">State Rank</string>
+    <string name="district_rank">District Rank</string>
+    <string name="reward_points_earned">Reward points Earned</string>
+    <string name="end_date">End Date</string>
+    <string name="start_date">Start Date</string>
+    <string name="logout">Logout</string>
+    <string name="admin_name">Admin Name</string>
+    <string name="admin_password">Admin Password</string>
+</resources>
