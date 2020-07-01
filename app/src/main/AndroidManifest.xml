@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.saitejajanjirala.sharetosocial">
+    package="com.saitejajanjirala.shareto">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -12,26 +12,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.PostActivity"
+        <activity android:name="com.saitejajanjirala.shareto.activities.PostActivity"
             android:theme="@style/AppThemewithActionBar"/>
         <activity
-            android:name=".activities.AdminloginActivity"
+            android:name="com.saitejajanjirala.shareto.activities.AdminloginActivity"
             android:theme="@style/AppThemewithActionBar" />
-        <activity android:name=".activities.MainscreenActivity" />
+        <activity android:name="com.saitejajanjirala.shareto.activities.MainscreenActivity" />
         <activity
-            android:name=".activities.ForgotpasswordActivity"
-            android:theme="@style/AppThemewithActionBar" />
-        <activity
-            android:name=".activities.AddsociallinksActivity"
+            android:name="com.saitejajanjirala.shareto.activities.ForgotpasswordActivity"
             android:theme="@style/AppThemewithActionBar" />
         <activity
-            android:name=".activities.SignupActivity"
+            android:name="com.saitejajanjirala.shareto.activities.AddsociallinksActivity"
             android:theme="@style/AppThemewithActionBar" />
         <activity
-            android:name=".activities.OtpActivity"
+            android:name="com.saitejajanjirala.shareto.activities.SignupActivity"
             android:theme="@style/AppThemewithActionBar" />
-        <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.MainActivity">
+        <activity
+            android:name="com.saitejajanjirala.shareto.activities.OtpActivity"
+            android:theme="@style/AppThemewithActionBar" />
+        <activity android:name="com.saitejajanjirala.shareto.activities.LoginActivity" />
+        <activity android:name="com.saitejajanjirala.shareto.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

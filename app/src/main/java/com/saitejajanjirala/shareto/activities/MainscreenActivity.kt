@@ -1,4 +1,4 @@
-package com.saitejajanjirala.sharetosocial.activities
+package com.saitejajanjirala.shareto.activities
 
 import android.content.Context
 import android.content.Intent
@@ -9,10 +9,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import com.saitejajanjirala.sharetosocial.R
-import com.saitejajanjirala.sharetosocial.fragments.DashboardFragment
-import com.saitejajanjirala.sharetosocial.fragments.HomeFragment
-import com.saitejajanjirala.sharetosocial.fragments.TasksFragment
+import com.saitejajanjirala.shareto.R
+import com.saitejajanjirala.shareto.fragments.DashboardFragment
+import com.saitejajanjirala.shareto.fragments.HomeFragment
+import com.saitejajanjirala.shareto.fragments.TasksFragment
 import kotlinx.android.synthetic.main.activity_mainscreen.*
 
 

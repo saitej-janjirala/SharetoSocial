@@ -1,11 +1,11 @@
-package com.saitejajanjirala.sharetosocial.adapters
+package com.saitejajanjirala.shareto.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.saitejajanjirala.sharetosocial.R
+import com.saitejajanjirala.shareto.R
 
 class DashboardAdapter(val context:Context) :RecyclerView.Adapter<DashboardAdapter.DashboardViewHolder>(){
     class DashboardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

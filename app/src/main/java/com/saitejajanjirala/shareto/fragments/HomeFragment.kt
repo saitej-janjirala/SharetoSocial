@@ -1,11 +1,11 @@
-package com.saitejajanjirala.sharetosocial.fragments
+package com.saitejajanjirala.shareto.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.saitejajanjirala.sharetosocial.R
+import com.saitejajanjirala.shareto.R
 
 
 class HomeFragment : Fragment() {

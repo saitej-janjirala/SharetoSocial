@@ -1,4 +1,4 @@
-package com.saitejajanjirala.sharetosocial
+package com.saitejajanjirala.shareto
 
 import org.junit.Test
 

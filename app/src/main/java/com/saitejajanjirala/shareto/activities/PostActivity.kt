@@ -1,4 +1,4 @@
-package com.saitejajanjirala.sharetosocial.activities
+package com.saitejajanjirala.shareto.activities
 
 import android.content.Context
 import android.content.Intent
@@ -10,7 +10,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
-import com.saitejajanjirala.sharetosocial.R
+import com.saitejajanjirala.shareto.R
 
 class PostActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

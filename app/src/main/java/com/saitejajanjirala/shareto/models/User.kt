@@ -1,4 +1,4 @@
-package com.saitejajanjirala.sharetosocial.models
+package com.saitejajanjirala.shareto.models
 
 data class User(
     var uid:String?=null,

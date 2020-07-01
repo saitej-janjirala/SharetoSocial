@@ -1,4 +1,4 @@
-package com.saitejajanjirala.sharetosocial.activities
+package com.saitejajanjirala.shareto.activities
 
 import android.content.Context
 import android.content.Intent
@@ -10,8 +10,8 @@ import android.view.MenuItem
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
-import com.saitejajanjirala.sharetosocial.R
-import com.saitejajanjirala.sharetosocial.utils.Connectivity
+import com.saitejajanjirala.shareto.R
+import com.saitejajanjirala.shareto.utils.Connectivity
 import kotlinx.android.synthetic.main.activity_addsociallinks.*
 
 

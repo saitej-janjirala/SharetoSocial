@@ -1,11 +1,11 @@
-package com.saitejajanjirala.sharetosocial.activities
+package com.saitejajanjirala.shareto.activities
 
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.saitejajanjirala.sharetosocial.R
+import com.saitejajanjirala.shareto.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

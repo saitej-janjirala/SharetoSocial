@@ -1,10 +1,10 @@
-package com.saitejajanjirala.sharetosocial.activities
+package com.saitejajanjirala.shareto.activities
 
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import com.saitejajanjirala.sharetosocial.R
+import com.saitejajanjirala.shareto.R
 
 class ForgotpasswordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

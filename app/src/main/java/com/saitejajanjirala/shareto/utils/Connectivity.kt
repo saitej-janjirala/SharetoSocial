@@ -1,4 +1,4 @@
-package com.saitejajanjirala.sharetosocial.utils
+package com.saitejajanjirala.shareto.utils
 
 import android.app.AlertDialog
 import android.content.Context

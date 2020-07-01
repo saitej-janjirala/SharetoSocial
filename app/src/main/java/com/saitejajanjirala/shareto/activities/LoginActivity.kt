@@ -1,14 +1,13 @@
-package com.saitejajanjirala.sharetosocial.activities
+package com.saitejajanjirala.shareto.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import androidx.core.app.ActivityCompat
 import com.google.android.material.snackbar.Snackbar
-import com.saitejajanjirala.sharetosocial.R
-import com.saitejajanjirala.sharetosocial.utils.Connectivity
+import com.saitejajanjirala.shareto.R
+import com.saitejajanjirala.shareto.utils.Connectivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {

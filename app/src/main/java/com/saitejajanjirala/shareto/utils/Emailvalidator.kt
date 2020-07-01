@@ -1,4 +1,4 @@
-package com.saitejajanjirala.sharetosocial.utils
+package com.saitejajanjirala.shareto.utils
 
 class Emailvalidator {
     fun isEmailValid(email: String): Boolean {

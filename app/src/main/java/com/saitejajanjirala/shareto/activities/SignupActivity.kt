@@ -1,4 +1,4 @@
-package com.saitejajanjirala.sharetosocial.activities
+package com.saitejajanjirala.shareto.activities
 
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
@@ -12,13 +12,11 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.Spinner
-import androidx.core.view.get
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
-import com.saitejajanjirala.sharetosocial.R
-import com.saitejajanjirala.sharetosocial.utils.Connectivity
-import com.saitejajanjirala.sharetosocial.utils.Emailvalidator
-import kotlinx.android.synthetic.main.activity_login.*
+import com.saitejajanjirala.shareto.R
+import com.saitejajanjirala.shareto.utils.Connectivity
+import com.saitejajanjirala.shareto.utils.Emailvalidator
 import kotlinx.android.synthetic.main.activity_signup.*
 
 class SignupActivity : AppCompatActivity() {

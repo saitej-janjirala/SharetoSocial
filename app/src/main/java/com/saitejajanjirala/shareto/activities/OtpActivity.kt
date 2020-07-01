@@ -1,4 +1,4 @@
-package com.saitejajanjirala.sharetosocial.activities
+package com.saitejajanjirala.shareto.activities
 
 import android.app.ProgressDialog
 import android.content.Context
@@ -7,28 +7,21 @@ import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import com.google.android.gms.tasks.Task
 import com.google.firebase.FirebaseException
-import com.google.firebase.FirebaseTooManyRequestsException
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.saitejajanjirala.sharetosocial.R
-import com.saitejajanjirala.sharetosocial.models.Rewards
-import com.saitejajanjirala.sharetosocial.models.User
+import com.saitejajanjirala.shareto.R
+import com.saitejajanjirala.shareto.models.Rewards
+import com.saitejajanjirala.shareto.models.User
 import kotlinx.android.synthetic.main.activity_otp.*
-import java.util.*
 import java.util.concurrent.TimeUnit
 import kotlin.collections.HashMap
 
@@ -46,6 +39,7 @@ class OtpActivity : AppCompatActivity() {
     private var resendtoken:PhoneAuthProvider.ForceResendingToken?=null
     private var xverificationid:String?=null
     private var mauth:FirebaseAuth?=null
+    var count=0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_otp)
@@ -75,6 +69,22 @@ class OtpActivity : AppCompatActivity() {
             }
         }
     }
+    fun setactionbar(){
+        supportActionBar?.title="OTP"
+        val colorDrawable: ColorDrawable = ColorDrawable(resources.getColor(R.color.colorAccent))
+        supportActionBar?.setBackgroundDrawable(colorDrawable)
+        supportActionBar?.setHomeButtonEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            android.R.id.home->{
+                super.onBackPressed()
+                finish()
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
     fun sendotp(){
         val mCallbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             override fun onVerificationCompleted(credential: PhoneAuthCredential) {
@@ -103,7 +113,7 @@ class OtpActivity : AppCompatActivity() {
         }
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
             "+91$xnumber!!",        // Phone number to verify
-            60,                 // Timeout duration
+                    60,                 // Timeout duration
             TimeUnit.SECONDS,   // Unit of timeout
             this,               // Activity (for callback binding)
             mCallbacks
@@ -124,22 +134,7 @@ class OtpActivity : AppCompatActivity() {
             Toast.makeText(this@OtpActivity,it.message.toString(),Toast.LENGTH_SHORT).show()
         }
     }
-    fun setactionbar(){
-        supportActionBar?.title="OTP"
-        val colorDrawable: ColorDrawable = ColorDrawable(resources.getColor(R.color.colorAccent))
-        supportActionBar?.setBackgroundDrawable(colorDrawable)
-        supportActionBar?.setHomeButtonEnabled(true)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-    }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            android.R.id.home->{
-                super.onBackPressed()
-                finish()
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
+
     fun ifaccountopened(uid:String){
         val dbref=FirebaseDatabase.getInstance().reference.child("users").child(uid)
         dbref.addValueEventListener(object:ValueEventListener{
@@ -190,22 +185,28 @@ class OtpActivity : AppCompatActivity() {
                                         break
                                     }
                                 }
-                                if(value){
+                                if(value) {
                                     if (user != null) {
-                                        user.uid?.let {
-                                          val update=FirebaseDatabase.getInstance().reference.child("rewards").child(it)
-                                              update.addValueEventListener(object:ValueEventListener{
-                                                  override fun onCancelled(error: DatabaseError) {
-                                                  }
-                                                  override fun onDataChange(snapshot: DataSnapshot) {
-                                                      val rewards:Rewards?=snapshot.getValue(Rewards::class.java)
-                                                      val map=HashMap<String,Any?>()
-                                                      map["rewardpoints"]=rewards!!.rewardpoints!!.plus(20)
-                                                      update.updateChildren(map)
-                                                      createuserdata(uid)
-                                                      dialog.dismiss()
-                                                  }
-                                              })
+                                        if (user.uid != null) {
+                                            val update=FirebaseDatabase.getInstance().reference
+                                                .child("rewards").child(user.uid!!)
+                                            update.addListenerForSingleValueEvent(object:ValueEventListener{
+                                                override fun onCancelled(error: DatabaseError) {
+                                                }
+                                                override fun onDataChange(snapshot: DataSnapshot) {
+                                                    if(snapshot.exists()){
+                                                        if(count==0) {
+                                                            val rewards: Rewards? =
+                                                                snapshot.getValue(Rewards::class.java)
+                                                            UpdateRewardPoints(
+                                                                user.uid!!,
+                                                                rewards!!.rewardpoints!!
+                                                            )
+                                                            createuserdata(uid)
+                                                        }
+                                                    }
+                                                }
+                                            })
                                         }
                                     }
                                     else{
@@ -236,8 +237,17 @@ class OtpActivity : AppCompatActivity() {
         }
         //have to change to hashmap
     }
+    fun UpdateRewardPoints(uid:String,points:Int){
+            val map=HashMap<String,Any>()
+            map["rewardpoints"]=points+20
+            val upload=FirebaseDatabase.getInstance().reference.child("rewards")
+                .child(uid)
+            count+=1
+            upload.updateChildren(map)
+    }
     fun createuserdata(uid: String){
         val usersmap = HashMap<String, Any>()
+        usersmap["uid"]=uid
         usersmap["name"] = xname!!
         usersmap["email"] = xemail!!
         usersmap["number"] = xnumber!!
@@ -250,18 +260,22 @@ class OtpActivity : AppCompatActivity() {
         usersmap["referedby"]=xreferal!!
         val db=FirebaseDatabase.getInstance().reference.child("users").child(uid)
         db.updateChildren(usersmap).addOnSuccessListener {
-            val rewardsmap=HashMap<String,Any>()
-            rewardsmap["rewardpoints"]=0
-            rewardsmap["level"]="Beginner"
-            FirebaseDatabase.getInstance().reference.child("rewards")
-                .child(uid)
-                .updateChildren(rewardsmap)
-                .addOnSuccessListener {
-                    Toast.makeText(this@OtpActivity, "Success", Toast.LENGTH_SHORT).show()
-                    savetosharedprefs(uid)
-                }
+           createwithrewards(uid)
         }.addOnFailureListener {
                 Toast.makeText(this@OtpActivity, "Error", Toast.LENGTH_SHORT).show()
+            }
+    }
+    fun createwithrewards(uid:String){
+        val rewardsmap=HashMap<String,Any>()
+        rewardsmap["rewardpoints"]=0
+        rewardsmap["level"]="Beginner"
+        FirebaseDatabase.getInstance().reference.child("rewards")
+            .child(uid)
+            .updateChildren(rewardsmap)
+            .addOnSuccessListener {
+                Toast.makeText(this@OtpActivity, "Success", Toast.LENGTH_SHORT)
+                    .show()
+                savetosharedprefs(uid)
             }
     }
     fun showerrordialog(msg:String){
@@ -281,4 +295,8 @@ class OtpActivity : AppCompatActivity() {
         },500)
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
+    }
 }

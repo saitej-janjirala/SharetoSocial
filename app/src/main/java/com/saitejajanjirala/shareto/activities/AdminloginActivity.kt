@@ -1,11 +1,10 @@
-package com.saitejajanjirala.sharetosocial.activities
+package com.saitejajanjirala.shareto.activities
 
 import android.app.ProgressDialog
 import android.content.Context
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
@@ -16,8 +15,8 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.saitejajanjirala.sharetosocial.R
-import com.saitejajanjirala.sharetosocial.utils.Connectivity
+import com.saitejajanjirala.shareto.R
+import com.saitejajanjirala.shareto.utils.Connectivity
 import kotlinx.android.synthetic.main.activity_adminlogin.*
 
 class AdminloginActivity : AppCompatActivity() {
